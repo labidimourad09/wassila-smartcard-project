@@ -1,0 +1,1 @@
+"name: CI\n\non: [push]\n\njobs:\n  build:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v2\n      - name: Setup Python\n        uses: actions/setup-python@v2\n        with:\n          python-version: '3.10'\n      - run: pip install -r backend/requirements.txt\n      - run: pytest backend/tests\n" 
